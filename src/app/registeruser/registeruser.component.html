@@ -5,10 +5,12 @@
     <table>
       <tr>
         <td><label>Username</label> </td>
+        
         <td>
-          <input type="text" formControlName="userName" placeholder="Enter Username">
+          <input type="text" formControlName="userName" placeholder="Enter Username"></td>
+          <td>
           <div *ngIf="myRegistrationForm.get('userName').errors  && isSubmitted">
-            <div *ngIf="myRegistrationForm.get('username').hasError('required')">
+            <div *ngIf="myRegistrationForm.get('userName').hasError('required')">
               <span style="color:blue;">Username is required</span>
             </div>
             <div *ngIf="myRegistrationForm.get('userName').hasError('minLength')">
